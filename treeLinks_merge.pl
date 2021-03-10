@@ -22,7 +22,7 @@ for my $i (0 .. $#ARGV){
 my %DescArr;
 for my $i (0 .. $#ARGV){
 	for my $ancs(keys %{$Desc{$ARGV[$i]}}){
-		my @arr=sort @{$Desc{$ARGV[$i]}{$ancs}}; # 20200826 排序保留了各层级结构，有助于后续的共同祖先比较
+		my @arr=sort @{$Desc{$ARGV[$i]}{$ancs}}; 
 		$DescArr{$ancs}=join(":",@arr);
 	}
 }
